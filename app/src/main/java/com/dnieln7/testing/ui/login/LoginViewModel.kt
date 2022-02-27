@@ -24,6 +24,10 @@ class LoginViewModel(private val repository: LoginRepository) : ViewModel() {
         }
     }
 
+    fun resetState() {
+        _loginState.value = LoginState()
+    }
+
     data class LoginState(
         val loading: Boolean = false,
         val success: Boolean = false,

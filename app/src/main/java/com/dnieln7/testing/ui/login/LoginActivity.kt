@@ -45,6 +45,8 @@ class LoginActivity : AppCompatActivity() {
                     binding.error.text = it.error ?: getString(R.string.unknown_error)
                     binding.error.visibility = View.VISIBLE
                 }
+
+                loginViewModel.resetState()
             }
         }
     }
