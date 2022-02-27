@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Testing Examples</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="enter_your_credentials">Enter your credentials</string>
+    <string name="basic_login_testing">Basic login testing</string>
+    <string name="unknown_error">Unknown error, try again.</string>
+    <string name="navigation">Navigation</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Testing Examples</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="email">Correo electrónico</string>
+    <string name="enter_your_credentials">Ingresa tus credenciales</string>
+    <string name="basic_login_testing">Pruebas basicas de login</string>
+    <string name="unknown_error">Error desconocido, intenta de nuevo.</string>
+    <string name="navigation">Navigation</string>
+</resources>
