@@ -7,4 +7,6 @@
     <string name="basic_login_testing">Basic login testing</string>
     <string name="unknown_error">Unknown error, try again.</string>
     <string name="navigation">Navigation</string>
+    <string name="wrong_email">Wrong email</string>
+    <string name="wrong_password">Enter a valid password</string>
 </resources>

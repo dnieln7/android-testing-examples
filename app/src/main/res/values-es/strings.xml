@@ -8,4 +8,6 @@
     <string name="basic_login_testing">Pruebas basicas de login</string>
     <string name="unknown_error">Error desconocido, intenta de nuevo.</string>
     <string name="navigation">Navigation</string>
+    <string name="wrong_email">Correo electrónico incorrecto</string>
+    <string name="wrong_password">Ingresa una contraseña válida</string>
 </resources>

@@ -4,12 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.core.widget.doOnTextChanged
 import com.dnieln7.testing.R
 import com.dnieln7.testing.TestingExamplesApplication
 import com.dnieln7.testing.databinding.ActivityLoginBinding
 import com.dnieln7.testing.utils.TextValidation
-import com.dnieln7.testing.utils.toastLong
 import com.dnieln7.testing.utils.toastShort
 
 class LoginActivity : AppCompatActivity() {
@@ -52,21 +50,29 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initActions() {
-        binding.email.doOnTextChanged { text, _, _, _ ->
-            if (TextValidation.isEmail(text.toString())) {
-                binding.emailContainer.error = null
-            } else {
-                binding.emailContainer.error = "Wrong email"
-            }
-        }
-
         binding.login.setOnClickListener {
-            if (binding.emailContainer.error == null && binding.email.text.toString().isNotBlank()) {
+            if (isFormValid()) {
                 loginViewModel.login(
                     binding.email.text.toString(),
                     binding.password.text.toString()
                 )
             }
         }
+    }
+
+    private fun isFormValid(): Boolean {
+        if (TextValidation.isEmail(binding.email.text.toString())) {
+            binding.emailContainer.error = null
+        } else {
+            binding.emailContainer.error = getString(R.string.wrong_email)
+        }
+
+        if (binding.password.text.toString().isNotBlank()) {
+            binding.passwordContainer.error = null
+        } else {
+            binding.passwordContainer.error = getString(R.string.wrong_password)
+        }
+
+        return binding.emailContainer.error == null && binding.passwordContainer.error == null
     }
 }
