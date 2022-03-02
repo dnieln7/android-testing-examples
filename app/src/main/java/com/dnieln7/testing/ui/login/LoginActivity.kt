@@ -39,12 +39,12 @@ class LoginActivity : AppCompatActivity() {
                 if (it.success) {
                     binding.error.visibility = View.GONE
                     toastShort("Logged in")
-                } else {
-                    binding.error.text = it.error ?: getString(R.string.unknown_error)
+                    loginViewModel.resetState()
+                }
+                if (it.error != null) {
+                    binding.error.text = it.error
                     binding.error.visibility = View.VISIBLE
                 }
-
-                loginViewModel.resetState()
             }
         }
     }
