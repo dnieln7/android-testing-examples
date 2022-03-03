@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_basic.xml"
+    app:startDestination="@id/keyboardFragment">
+
+    <fragment
+        android:id="@+id/keyboardFragment"
+        android:name="com.dnieln7.testing.ui.navigation.fragment.KeyboardFragment"
+        android:label="@string/keyboard"
+        tools:layout="@layout/fragment_keyboard">
+        <action
+            android:id="@+id/action_keyboardFragment_to_keysFragment"
+            app:destination="@id/keysFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/keysFragment"
+        android:name="com.dnieln7.testing.ui.navigation.fragment.KeysFragment"
+        android:label="@string/keys"
+        tools:layout="@layout/fragment_keys" >
+        <argument
+            android:name="keySet"
+            app:argType="com.dnieln7.testing.model.KeySet" />
+    </fragment>
+</navigation>

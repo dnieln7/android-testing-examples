@@ -10,4 +10,6 @@
     <string name="navigation">Navigation</string>
     <string name="wrong_email">Correo electrónico incorrecto</string>
     <string name="wrong_password">Ingresa una contraseña válida</string>
+    <string name="keys">Teclas</string>
+    <string name="keyboard">Teclado</string>
 </resources>

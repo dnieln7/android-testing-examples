@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -48,13 +49,21 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
 
     // Lifecycles
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
 
     // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
 
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    debugImplementation 'androidx.fragment:fragment-testing:1.4.1'
+    androidTestImplementation 'androidx.navigation:navigation-testing:2.4.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
 
     // Junit
     testImplementation 'junit:junit:4.13.2'
