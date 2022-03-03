@@ -9,6 +9,7 @@ import com.dnieln7.testing.TestingExamplesApplication
 import com.dnieln7.testing.databinding.ActivityLoginBinding
 import com.dnieln7.testing.utils.TextValidation
 import com.dnieln7.testing.utils.toastShort
+import com.dnieln7.testing.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
 

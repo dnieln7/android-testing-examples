@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.login
+package com.dnieln7.testing.viewmodel
 
 import androidx.lifecycle.*
 import com.dnieln7.testing.model.LoginRequest
