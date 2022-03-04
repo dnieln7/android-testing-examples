@@ -12,4 +12,6 @@
     <string name="wrong_password">Ingresa una contraseña válida</string>
     <string name="keys">Teclas</string>
     <string name="keyboard">Teclado</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="view_model">ViewModel</string>
 </resources>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dnieln7.testing">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".TestingExamplesApplication"
         android:allowBackup="true"
@@ -10,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestingExamples">
+        <activity
+            android:name=".ui.mars.MarsActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.navigation.NavigationActivity"
             android:exported="false" />

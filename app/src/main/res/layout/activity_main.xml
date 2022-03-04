@@ -11,14 +11,20 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/view_model"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
-        android:text="@string/login" />
+        android:text="@string/view_model" />
 
     <Button
         android:id="@+id/navigation"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:text="@string/navigation" />
+
+    <Button
+        android:id="@+id/retrofit"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/retrofit" />
 </GridLayout>
