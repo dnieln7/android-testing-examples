@@ -14,4 +14,18 @@
     <string name="keyboard">Teclado</string>
     <string name="retrofit">Retrofit</string>
     <string name="view_model">ViewModel</string>
+    <string name="delete">Borrar</string>
+    <string name="name">Nombre</string>
+    <string name="description">Descripción</string>
+    <string name="friendliness">Amabilidad</string>
+    <string name="child_friendly">Amigable con niños</string>
+    <string name="dog_friendly">Amigable con perros</string>
+    <string name="stranger_friendly">Amigable con estraños</string>
+    <string name="edit_cat">Editar gato</string>
+    <string name="add_cat">Agregar gato</string>
+    <string name="wrong_empty">Este campo es requerido</string>
+    <string name="save">Guardar</string>
+    <string name="room">Room</string>
+    <string name="cat_detail">Detalles</string>
+    <string name="cats">Gatos</string>
 </resources>

@@ -13,4 +13,18 @@
     <string name="keyboard">keyboard</string>
     <string name="retrofit">Retrofit</string>
     <string name="view_model">ViewModel</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="friendliness">Friendliness</string>
+    <string name="child_friendly">Child friendly</string>
+    <string name="dog_friendly">Dog friendly</string>
+    <string name="stranger_friendly">Stranger friendly</string>
+    <string name="edit_cat">Edit cat</string>
+    <string name="add_cat">Add cat</string>
+    <string name="wrong_empty">This field is required</string>
+    <string name="save">Save</string>
+    <string name="room">Room</string>
+    <string name="cat_detail">Cat detail</string>
+    <string name="cats">Cats</string>
 </resources>

@@ -27,4 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:text="@string/retrofit" />
+
+    <Button
+        android:id="@+id/room"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/room" />
 </GridLayout>
