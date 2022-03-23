@@ -1,6 +1,6 @@
 package com.dnieln7.testing.datasource.login
 
-import com.dnieln7.testing.model.LoginRequest
+import com.dnieln7.testing.model.login.LoginRequest
 import junit.framework.TestCase.assertTrue
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertFalse

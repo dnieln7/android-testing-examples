@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.cats.adapter
+package com.dnieln7.testing.ui.room.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

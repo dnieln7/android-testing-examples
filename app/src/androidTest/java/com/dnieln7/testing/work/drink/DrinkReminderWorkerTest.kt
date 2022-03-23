@@ -3,12 +3,11 @@ package com.dnieln7.testing.work.drink
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.espresso.matcher.ViewMatchers.assertThat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.work.*
 import androidx.work.impl.utils.SynchronousExecutor
 import androidx.work.testing.WorkManagerTestInitHelper
-import org.hamcrest.Matchers.`is`
+import com.dnieln7.testing.work.drink.workers.DrinkReminderWorker
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

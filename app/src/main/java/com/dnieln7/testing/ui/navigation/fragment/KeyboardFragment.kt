@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.dnieln7.testing.databinding.FragmentKeyboardBinding
-import com.dnieln7.testing.model.KeySet
+import com.dnieln7.testing.model.keyboard.KeySet
 import com.dnieln7.testing.ui.navigation.adapter.KeySetAdapter
 
 class KeyboardFragment : Fragment() {

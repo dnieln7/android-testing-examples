@@ -1,4 +1,4 @@
-package com.dnieln7.testing.model
+package com.dnieln7.testing.model.keyboard
 
 import java.io.Serializable
 

@@ -1,16 +1,16 @@
-package com.dnieln7.testing.ui.mars
+package com.dnieln7.testing.ui.retrofit
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.dnieln7.testing.TestingExamplesApplication
-import com.dnieln7.testing.databinding.ActivityMarsBinding
-import com.dnieln7.testing.ui.mars.adapter.MarsPhotoAdapter
+import com.dnieln7.testing.databinding.ActivityRetrofitBinding
+import com.dnieln7.testing.ui.retrofit.adapter.MarsPhotoAdapter
 import com.dnieln7.testing.viewmodel.MarsViewModel
 
-class MarsActivity : AppCompatActivity() {
+class RetrofitActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMarsBinding
+    private lateinit var binding: ActivityRetrofitBinding
 
     private val marsViewModel by viewModels<MarsViewModel> {
         MarsViewModel.Factory((application as TestingExamplesApplication).serviceLocator.api.marsApi)
@@ -18,7 +18,7 @@ class MarsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMarsBinding.inflate(layoutInflater)
+        binding = ActivityRetrofitBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         marsViewModel.photos.observe(this) {

@@ -16,10 +16,10 @@
             android:name=".ui.work.WorkManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.cats.RoomActivity"
+            android:name=".ui.room.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.mars.MarsActivity"
+            android:name=".ui.retrofit.RetrofitActivity"
             android:exported="false" />
         <activity
             android:name=".ui.navigation.NavigationActivity"

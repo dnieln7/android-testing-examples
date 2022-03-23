@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.cats.fragment.CatDetailFragment">
+    tools:context=".ui.room.fragment.CatDetailFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

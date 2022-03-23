@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.cats.fragment
+package com.dnieln7.testing.ui.room.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,6 @@ import com.dnieln7.testing.R
 import com.dnieln7.testing.TestingExamplesApplication
 import com.dnieln7.testing.databinding.FragmentAddCatBinding
 import com.dnieln7.testing.model.cats.Cat
-import com.dnieln7.testing.utils.TextValidation
 import com.dnieln7.testing.viewmodel.CatsViewModel
 
 class AddCatFragment : Fragment() {

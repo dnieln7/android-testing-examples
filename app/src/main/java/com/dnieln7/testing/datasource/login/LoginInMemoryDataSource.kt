@@ -1,7 +1,7 @@
 package com.dnieln7.testing.datasource.login
 
-import com.dnieln7.testing.model.LoginRequest
-import com.dnieln7.testing.model.LoginResponse
+import com.dnieln7.testing.model.login.LoginRequest
+import com.dnieln7.testing.model.login.LoginResponse
 import kotlinx.coroutines.delay
 
 class LoginInMemoryDataSource : LoginRemoteDataSource {

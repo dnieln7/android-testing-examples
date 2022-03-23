@@ -2,7 +2,7 @@ package com.dnieln7.testing.viewmodel.login
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.dnieln7.testing.datasource.login.LoginInMemoryDataSource
-import com.dnieln7.testing.repository.LoginRepository
+import com.dnieln7.testing.repository.login.LoginRepository
 import com.dnieln7.testing.viewmodel.LoginViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Rule

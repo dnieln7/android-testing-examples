@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/addCatFragment"
-        android:name="com.dnieln7.testing.ui.cats.fragment.AddCatFragment"
+        android:name="com.dnieln7.testing.ui.room.fragment.AddCatFragment"
         android:label="@string/add_cat"
         tools:layout="@layout/fragment_add_cat" />
     <fragment
         android:id="@+id/catsFragment"
-        android:name="com.dnieln7.testing.ui.cats.fragment.CatsFragment"
+        android:name="com.dnieln7.testing.ui.room.fragment.CatsFragment"
         android:label="@string/cats"
         tools:layout="@layout/fragment_cats">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/editCatFragment"
-        android:name="com.dnieln7.testing.ui.cats.fragment.EditCatFragment"
+        android:name="com.dnieln7.testing.ui.room.fragment.EditCatFragment"
         android:label="@string/edit_cat"
         tools:layout="@layout/fragment_edit_cat">
         <argument
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/catDetailFragment"
-        android:name="com.dnieln7.testing.ui.cats.fragment.CatDetailFragment"
+        android:name="com.dnieln7.testing.ui.room.fragment.CatDetailFragment"
         android:label="@string/cat_detail"
         tools:layout="@layout/fragment_cat_detail">
         <action

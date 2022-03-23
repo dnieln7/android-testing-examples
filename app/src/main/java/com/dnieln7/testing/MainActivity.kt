@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dnieln7.testing.databinding.ActivityMainBinding
-import com.dnieln7.testing.ui.cats.RoomActivity
+import com.dnieln7.testing.ui.room.RoomActivity
 import com.dnieln7.testing.ui.login.LoginActivity
-import com.dnieln7.testing.ui.mars.MarsActivity
+import com.dnieln7.testing.ui.retrofit.RetrofitActivity
 import com.dnieln7.testing.ui.navigation.NavigationActivity
 import com.dnieln7.testing.ui.work.WorkManagerActivity
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.retrofit.setOnClickListener {
-            startActivity(Intent(this, MarsActivity::class.java))
+            startActivity(Intent(this, RetrofitActivity::class.java))
         }
 
         binding.room.setOnClickListener {

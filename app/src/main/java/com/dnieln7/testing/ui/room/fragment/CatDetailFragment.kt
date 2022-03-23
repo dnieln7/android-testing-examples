@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.cats.fragment
+package com.dnieln7.testing.ui.room.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.dnieln7.testing.TestingExamplesApplication
 import com.dnieln7.testing.databinding.FragmentCatDetailBinding
-import com.dnieln7.testing.ui.navigation.fragment.KeysFragmentArgs
 import com.dnieln7.testing.viewmodel.CatsViewModel
 
 class CatDetailFragment : Fragment() {

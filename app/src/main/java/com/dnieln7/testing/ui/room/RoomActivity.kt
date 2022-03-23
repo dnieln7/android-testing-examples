@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.cats
+package com.dnieln7.testing.ui.room
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

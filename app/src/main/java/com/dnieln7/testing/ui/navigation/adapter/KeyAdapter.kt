@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dnieln7.testing.databinding.ListTileKeyBinding
-import com.dnieln7.testing.model.KeySet
 
 class KeyAdapter(private val data: List<String>) :
     RecyclerView.Adapter<KeyAdapter.KeyViewHolder>() {

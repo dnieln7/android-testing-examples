@@ -1,8 +1,8 @@
-package com.dnieln7.testing.repository
+package com.dnieln7.testing.repository.login
 
 import com.dnieln7.testing.datasource.login.LoginRemoteDataSource
-import com.dnieln7.testing.model.LoginRequest
-import com.dnieln7.testing.model.LoginResponse
+import com.dnieln7.testing.model.login.LoginRequest
+import com.dnieln7.testing.model.login.LoginResponse
 
 class LoginRepository(private val dataSource: LoginRemoteDataSource) {
 

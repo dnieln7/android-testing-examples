@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.cats.fragment
+package com.dnieln7.testing.ui.room.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

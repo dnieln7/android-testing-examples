@@ -1,8 +1,8 @@
 package com.dnieln7.testing.viewmodel
 
 import androidx.lifecycle.*
-import com.dnieln7.testing.model.LoginRequest
-import com.dnieln7.testing.repository.LoginRepository
+import com.dnieln7.testing.model.login.LoginRequest
+import com.dnieln7.testing.repository.login.LoginRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

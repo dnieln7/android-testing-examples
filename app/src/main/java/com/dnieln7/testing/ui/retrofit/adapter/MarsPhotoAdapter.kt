@@ -1,4 +1,4 @@
-package com.dnieln7.testing.ui.mars.adapter
+package com.dnieln7.testing.ui.retrofit.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

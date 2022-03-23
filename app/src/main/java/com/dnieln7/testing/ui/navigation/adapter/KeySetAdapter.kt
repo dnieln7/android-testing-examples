@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dnieln7.testing.databinding.GridTileKeySetBinding
-import com.dnieln7.testing.model.KeySet
+import com.dnieln7.testing.model.keyboard.KeySet
 
 class KeySetAdapter(
     private val data: List<KeySet>,

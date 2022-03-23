@@ -4,7 +4,7 @@ import android.content.Context
 import com.dnieln7.testing.datasource.login.LoginInMemoryDataSource
 import com.dnieln7.testing.network.Api
 import com.dnieln7.testing.persistance.AppDatabase
-import com.dnieln7.testing.repository.LoginRepository
+import com.dnieln7.testing.repository.login.LoginRepository
 
 class ServiceLocator(context: Context) {
     private val loginRemoteDataSource by lazy { LoginInMemoryDataSource() }
