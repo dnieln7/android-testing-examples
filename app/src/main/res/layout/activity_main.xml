@@ -33,4 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:text="@string/room" />
+
+    <Button
+        android:id="@+id/work_manager"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="@string/work_manager" />
 </GridLayout>

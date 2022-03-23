@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestingExamples">
         <activity
+            android:name=".ui.work.WorkManagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.cats.RoomActivity"
             android:exported="false" />
         <activity

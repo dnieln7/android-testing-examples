@@ -28,4 +28,9 @@
     <string name="room">Room</string>
     <string name="cat_detail">Detalles</string>
     <string name="cats">Gatos</string>
+    <string name="time_to_drink">Hora de beber agua, %1$s</string>
+    <string name="work_manager">Work manager</string>
+    <string name="start">Start</string>
+    <string name="cancel">Cancelar</string>
+    <string name="set_a_reminder">Establece un recordatorio para beber agua cada hora</string>
 </resources>

@@ -27,4 +27,9 @@
     <string name="room">Room</string>
     <string name="cat_detail">Cat detail</string>
     <string name="cats">Cats</string>
+    <string name="time_to_drink">Time to drink water, %1$s</string>
+    <string name="work_manager">Work manager</string>
+    <string name="start">Start</string>
+    <string name="cancel">Cancel</string>
+    <string name="set_a_reminder">Set a reminder to drink water every hour</string>
 </resources>
