@@ -25,6 +25,6 @@
         tools:layout="@layout/fragment_keys" >
         <argument
             android:name="keySet"
-            app:argType="com.dnieln7.testing.model.KeySet" />
+            app:argType="com.dnieln7.testing.model.keyboard.KeySet" />
     </fragment>
 </navigation>
