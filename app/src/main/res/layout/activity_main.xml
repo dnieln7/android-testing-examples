@@ -39,4 +39,16 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:text="@string/work_manager" />
+
+    <Button
+        android:id="@+id/hilt_data_source"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="Hilt Data Source" />
+
+    <Button
+        android:id="@+id/hilt_repository"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="Hilt Repository" />
 </GridLayout>

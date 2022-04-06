@@ -2,7 +2,7 @@ package com.dnieln7.testing.di
 
 import android.content.Context
 import com.dnieln7.testing.datasource.login.LoginInMemoryDataSource
-import com.dnieln7.testing.network.Api
+import com.dnieln7.testing.network.mars.Api
 import com.dnieln7.testing.persistance.AppDatabase
 import com.dnieln7.testing.repository.login.LoginRepository
 

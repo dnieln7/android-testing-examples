@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dnieln7.testing.databinding.ActivityMainBinding
+import com.dnieln7.testing.ui.hilt.spacex.SpacexActivity
 import com.dnieln7.testing.ui.room.RoomActivity
 import com.dnieln7.testing.ui.login.LoginActivity
 import com.dnieln7.testing.ui.retrofit.RetrofitActivity
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.workManager.setOnClickListener {
             startActivity(Intent(this, WorkManagerActivity::class.java))
+        }
+
+        binding.hiltDataSource.setOnClickListener {
+            startActivity(Intent(this, SpacexActivity::class.java))
         }
     }
 }

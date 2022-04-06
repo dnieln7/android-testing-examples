@@ -1,6 +1,5 @@
-package com.dnieln7.testing.network
+package com.dnieln7.testing.network.mars
 
-import com.dnieln7.testing.network.mars.MarsApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "ad84cc1f1d1369832e2f82b481540371",
+    "identityHash": "66fa4a37b6f619f22606db2e7dbfc3a1",
     "entities": [
       {
         "tableName": "tb_cats",
@@ -56,12 +56,62 @@
         },
         "indices": [],
         "foreignKeys": []
+      },
+      {
+        "tableName": "tb_missions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`missionId` TEXT NOT NULL, `description` TEXT NOT NULL, `missionName` TEXT NOT NULL, `twitter` TEXT, `website` TEXT NOT NULL, `wikipedia` TEXT NOT NULL, PRIMARY KEY(`missionId`))",
+        "fields": [
+          {
+            "fieldPath": "missionId",
+            "columnName": "missionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "missionName",
+            "columnName": "missionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "twitter",
+            "columnName": "twitter",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "website",
+            "columnName": "website",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wikipedia",
+            "columnName": "wikipedia",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "missionId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ad84cc1f1d1369832e2f82b481540371')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '66fa4a37b6f619f22606db2e7dbfc3a1')"
     ]
   }
 }
