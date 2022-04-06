@@ -9,7 +9,6 @@ import com.dnieln7.testing.databinding.ListTileCatBinding
 import com.dnieln7.testing.model.cats.Cat
 
 class CatAdapter(
-    private val data: List<Cat>,
     private val onClick: (Int) -> Unit,
     private val onDelete: (Cat) -> Unit
 ) : ListAdapter<Cat, CatAdapter.CatViewHolder>(CatDiffUtil()) {
@@ -41,9 +40,7 @@ class CatAdapter(
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(getItem(position))
     }
-
-    override fun getItemCount(): Int = data.size
 }
 

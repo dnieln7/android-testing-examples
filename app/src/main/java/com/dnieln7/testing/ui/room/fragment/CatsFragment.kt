@@ -17,6 +17,8 @@ class CatsFragment : Fragment() {
     private var _binding: FragmentCatsBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var adapter: CatAdapter
+
     private val catsViewModel by activityViewModels<CatsViewModel> {
         CatsViewModel.Factory((requireActivity().application as TestingExamplesApplication).serviceLocator.database.catDao())
     }
@@ -38,17 +40,20 @@ class CatsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        adapter = CatAdapter(
+            onClick = { toDetail(it) },
+            onDelete = { catsViewModel.delete(it) }
+        )
+
         binding.cats.setHasFixedSize(true)
+        binding.cats.adapter = adapter
+
         binding.add.setOnClickListener {
             findNavController().navigate(CatsFragmentDirections.actionCatsFragmentToAddCatFragment())
         }
 
-        catsViewModel.cats.observe(viewLifecycleOwner) { cats ->
-            binding.cats.adapter = CatAdapter(
-                data = cats,
-                onClick = {toDetail(it)},
-                onDelete = { catsViewModel.delete(it) }
-            )
+        catsViewModel.cats.observe(viewLifecycleOwner) {
+            adapter.submitList(it)
         }
     }
 
