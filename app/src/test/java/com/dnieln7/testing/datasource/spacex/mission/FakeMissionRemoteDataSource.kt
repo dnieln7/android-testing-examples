@@ -1,7 +1,6 @@
 package com.dnieln7.testing.datasource.spacex.mission
 
 import com.dnieln7.testing.model.spacex.Mission
-import kotlinx.coroutines.delay
 import retrofit2.Response
 
 class FakeMissionRemoteDataSource : MissionRemoteDataSource {
