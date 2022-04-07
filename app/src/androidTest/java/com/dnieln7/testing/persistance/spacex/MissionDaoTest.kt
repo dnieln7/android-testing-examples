@@ -1,8 +1,12 @@
 package com.dnieln7.testing.persistance.spacex
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.dnieln7.testing.model.spacex.Mission
 import com.dnieln7.testing.persistance.AppDatabase
 import com.dnieln7.testing.persistance.spacex.dao.MissionDao
+import com.dnieln7.testing.utils.Extensions.getOrAwaitValue
+import com.google.common.truth.Truth.assertThat
+//import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.runBlocking
@@ -18,6 +22,9 @@ class MissionDaoTest {
 
     @get:Rule
     val hiltRule = HiltAndroidRule(this)
+
+    @get:Rule
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Named("test_db")
     @Inject
@@ -51,5 +58,9 @@ class MissionDaoTest {
         )
 
         missionDao.saveMissions(missions)
+
+        val result = missionDao.getMissions().getOrAwaitValue()
+
+        assertThat(result).contains(missions.first())
     }
 }
