@@ -10,9 +10,9 @@ import com.dnieln7.testing.model.spacex.Mission
 @Dao
 interface MissionDao {
 
-    @Query("SELECT * FROM tb_missions")
-    fun getMissions(): LiveData<List<Mission>>
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMissions(missions: List<Mission>)
+    suspend fun saveAll(missions: List<Mission>)
+
+    @Query("SELECT * FROM tb_missions")
+    fun observe(): LiveData<List<Mission>>
 }
