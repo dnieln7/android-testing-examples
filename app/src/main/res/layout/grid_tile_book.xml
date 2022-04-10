@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="0dp"
+    app:cardUseCompatPadding="false"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_primary_light_rounded"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:importantForAccessibility="2"
+                android:src="@drawable/ic_book"
+                app:tint="#90000000" />
+
+            <TextView
+                android:id="@+id/download_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_white_rounded"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:drawableStartCompat="@drawable/ic_download"
+                app:drawableTint="@color/black"
+                tools:text="2500" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/has_copyright"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textSize="10sp"
+            app:drawableStartCompat="@drawable/ic_copyright"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

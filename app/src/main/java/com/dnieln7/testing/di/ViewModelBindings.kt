@@ -4,6 +4,8 @@ import com.dnieln7.testing.datasource.spacex.mission.MissionApiDataSource
 import com.dnieln7.testing.datasource.spacex.mission.MissionLocalDataSource
 import com.dnieln7.testing.datasource.spacex.mission.MissionRemoteDataSource
 import com.dnieln7.testing.datasource.spacex.mission.MissionRoomDataSource
+import com.dnieln7.testing.repository.book.BookRepository
+import com.dnieln7.testing.repository.book.IBookRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,7 +14,7 @@ import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
 @InstallIn(ViewModelComponent::class)
-abstract class MissionModule {
+abstract class ViewModelBindings {
 
     @Binds
     @ViewModelScoped

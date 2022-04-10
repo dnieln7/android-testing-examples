@@ -32,4 +32,12 @@
     <string name="start">Start</string>
     <string name="cancel">Cancel</string>
     <string name="set_a_reminder">Set a reminder to drink water every hour</string>
+    <string name="has_copyright">Has copyright</string>
+    <string name="languages">Languages</string>
+    <string name="subjects">Subjects</string>
+    <string name="bookshelves">Bookshelves</string>
+    <string name="using_local_data">Using local data</string>
+    <string name="authors">Authors</string>
+    <string name="books">Books</string>
+    <string name="book_detail">Book information</string>
 </resources>

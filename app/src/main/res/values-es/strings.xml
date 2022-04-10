@@ -33,4 +33,12 @@
     <string name="start">Start</string>
     <string name="cancel">Cancelar</string>
     <string name="set_a_reminder">Establece un recordatorio para beber agua cada hora</string>
+    <string name="has_copyright">Con copyright</string>
+    <string name="languages">Lenguajes</string>
+    <string name="subjects">Temas</string>
+    <string name="bookshelves">Estanterías</string>
+    <string name="using_local_data">Usando datos locales</string>
+    <string name="authors">Autores</string>
+    <string name="books">Libros</string>
+    <string name="book_detail">información del libro</string>
 </resources>

@@ -3,8 +3,10 @@ package com.dnieln7.testing.di
 import android.content.Context
 import androidx.room.Room
 import com.dnieln7.testing.BuildConfig
+import com.dnieln7.testing.network.books.BooksApi
 import com.dnieln7.testing.network.spacex.SpacexApi
 import com.dnieln7.testing.persistance.AppDatabase
+import com.dnieln7.testing.persistance.books.dao.BookDao
 import com.dnieln7.testing.persistance.spacex.dao.MissionDao
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -40,6 +42,16 @@ class ApplicationModule {
 
     @Provides
     @Singleton
+    fun provideBooksApi(moshi: Moshi): BooksApi {
+        return Retrofit.Builder()
+            .baseUrl(BuildConfig.BOOKS_API)
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .build()
+            .create(BooksApi::class.java)
+    }
+
+    @Provides
+    @Singleton
     fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
         return Room.databaseBuilder(
             context.applicationContext,
@@ -51,5 +63,10 @@ class ApplicationModule {
     @Provides
     fun provideMissionDao(appDatabase: AppDatabase): MissionDao {
         return appDatabase.missionDao()
+    }
+
+    @Provides
+    fun provideBookDao(appDatabase: AppDatabase): BookDao {
+        return appDatabase.bookDao()
     }
 }

@@ -57,9 +57,9 @@ class MissionDaoTest {
             ),
         )
 
-        missionDao.saveMissions(missions)
+        missionDao.saveAll(missions)
 
-        val result = missionDao.getMissions().getOrAwaitValue()
+        val result = missionDao.observe().getOrAwaitValue()
 
         assertThat(result).contains(missions.first())
     }

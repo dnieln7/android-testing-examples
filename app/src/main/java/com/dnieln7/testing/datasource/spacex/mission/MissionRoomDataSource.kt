@@ -10,10 +10,10 @@ class MissionRoomDataSource @Inject constructor(
 ) : MissionLocalDataSource {
 
     override fun getMissions(): LiveData<List<Mission>> {
-        return dao.getMissions()
+        return dao.observe()
     }
 
     override suspend fun saveMissions(missions: List<Mission>) {
-        dao.saveMissions(missions)
+        dao.saveAll(missions)
     }
 }
