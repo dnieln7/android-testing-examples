@@ -13,6 +13,7 @@ import com.dnieln7.testing.databinding.FragmentBookListBinding
 import com.dnieln7.testing.model.book.Book
 import com.dnieln7.testing.ui.hilt.adapter.BookAdapter
 import com.dnieln7.testing.utils.ApiResponse
+import com.dnieln7.testing.utils.DataSource
 import com.dnieln7.testing.utils.snackShort
 import com.dnieln7.testing.viewmodel.BookViewModel
 import kotlinx.coroutines.delay
@@ -42,35 +43,31 @@ class BookListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        bookViewModel.apiResponse.observe(viewLifecycleOwner) {
+        bookViewModel.dataResponse.observe(viewLifecycleOwner) {
             binding.refresh.isRefreshing = false
 
-            when (it) {
-                is ApiResponse.Error -> {
-                    binding.root.snackShort("${it.code} - ${it.message}")
+            binding.books.visibility = View.VISIBLE
+            binding.progress.visibility = View.GONE
 
-                    binding.books.visibility = View.VISIBLE
-                    binding.progress.visibility = View.GONE
+            if (it.data != null) {
+                binding.books.adapter = BookAdapter(it.data) { b -> goToDetail(b) }
+            }
 
-                    binding.headerMessage.title.text = getString(R.string.using_local_data)
+            if (it.source == DataSource.DATABASE) {
+                binding.headerMessage.title.text = getString(R.string.using_local_data)
 
-                    lifecycleScope.launch {
-                        binding.headerMessage.root.visibility = View.VISIBLE
+                lifecycleScope.launch {
+                    binding.headerMessage.root.visibility = View.VISIBLE
 
-                        delay(3000)
+                    delay(3000)
 
-                        binding.headerMessage.root.visibility = View.GONE
-                    }
-                }
-                ApiResponse.Success -> {
-                    binding.books.visibility = View.VISIBLE
-                    binding.progress.visibility = View.GONE
+                    binding.headerMessage.root.visibility = View.GONE
                 }
             }
-        }
 
-        bookViewModel.books.observe(viewLifecycleOwner) {
-            binding.books.adapter = BookAdapter(it) { b -> goToDetail(b) }
+            if (it.error != null) {
+                binding.root.snackShort("${it.error}")
+            }
         }
 
         binding.books.setHasFixedSize(true)

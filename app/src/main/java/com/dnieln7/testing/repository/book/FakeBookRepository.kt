@@ -6,14 +6,15 @@ import com.dnieln7.testing.model.book.Author
 import com.dnieln7.testing.model.book.Book
 import com.dnieln7.testing.model.book.BookResponse
 import com.dnieln7.testing.utils.ApiResponse
+import com.dnieln7.testing.utils.DataResponse
+import com.dnieln7.testing.utils.DataSource
 import kotlinx.coroutines.delay
-import retrofit2.Response
 
 class FakeBookRepository : IBookRepository {
 
     private val _observableBooks = MutableLiveData<List<Book>>()
 
-    override suspend fun get(): ApiResponse {
+    override suspend fun get(): DataResponse<List<Book>> {
         delay(2000)
 
         val response = BookResponse(
@@ -88,7 +89,7 @@ class FakeBookRepository : IBookRepository {
 
         _observableBooks.value = response.books
 
-        return ApiResponse.Success
+        return DataResponse(data = response.books, source = DataSource.API)
     }
 
     override suspend fun saveAll(books: List<Book>) {

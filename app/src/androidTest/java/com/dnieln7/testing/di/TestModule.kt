@@ -3,6 +3,8 @@ package com.dnieln7.testing.di
 import android.content.Context
 import androidx.room.Room
 import com.dnieln7.testing.persistance.AppDatabase
+import com.dnieln7.testing.repository.book.FakeBookRepository
+import com.dnieln7.testing.repository.book.IBookRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,5 +22,11 @@ object TestModule {
         return Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java)
             .allowMainThreadQueries()
             .build()
+    }
+
+    @Named("test_book_repository")
+    @Provides
+    fun provideIBookRepository(): IBookRepository {
+        return FakeBookRepository()
     }
 }

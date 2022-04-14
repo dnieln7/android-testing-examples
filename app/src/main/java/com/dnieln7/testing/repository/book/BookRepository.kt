@@ -2,11 +2,11 @@ package com.dnieln7.testing.repository.book
 
 import androidx.lifecycle.LiveData
 import com.dnieln7.testing.model.book.Book
-import com.dnieln7.testing.model.book.BookResponse
 import com.dnieln7.testing.network.books.BooksApi
 import com.dnieln7.testing.persistance.books.dao.BookDao
-import com.dnieln7.testing.utils.ApiResponse
-import retrofit2.Response
+import com.dnieln7.testing.utils.DataResponse
+import com.dnieln7.testing.utils.DataSource
+import kotlinx.coroutines.*
 import javax.inject.Inject
 
 class BookRepository @Inject constructor(
@@ -14,22 +14,25 @@ class BookRepository @Inject constructor(
     private val bookDao: BookDao
 ) : IBookRepository {
 
-    override suspend fun get(): ApiResponse {
-        val response: Response<BookResponse>
+    override suspend fun get(): DataResponse<List<Book>> = coroutineScope {
+        val dataResponse = try {
+            val response = booksApi.get()
 
-        try {
-            response = booksApi.get()
+            if (response.isSuccessful) {
+                bookDao.saveAll(response.body()?.books ?: emptyList())
+                DataResponse(data = response.body()?.books ?: emptyList(), source = DataSource.API)
+            } else {
+                val local = bookDao.get()
+
+                DataResponse(data = local, source = DataSource.DATABASE)
+            }
         } catch (e: Exception) {
-            return ApiResponse.Error(0, e.localizedMessage ?: "Internal error")
+            val local = bookDao.get()
+
+            DataResponse(data = local, source = DataSource.DATABASE, error = e.localizedMessage)
         }
 
-        return if (response.isSuccessful && response.body() != null) {
-            bookDao.saveAll(response.body()?.books ?: emptyList())
-
-            ApiResponse.Success
-        } else {
-            ApiResponse.Error(response.code(), response.errorBody()?.toString() ?: "Unknown error")
-        }
+        return@coroutineScope dataResponse
     }
 
     override suspend fun saveAll(books: List<Book>) {

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dnieln7.testing.model.book.Book
 import com.dnieln7.testing.repository.book.IBookRepository
-import com.dnieln7.testing.utils.ApiResponse
+import com.dnieln7.testing.utils.DataResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,10 +18,8 @@ class BookViewModel @Inject constructor(
     private val iBookRepository: IBookRepository
 ) : ViewModel() {
 
-    private val _apiResponse = MutableLiveData<ApiResponse>()
-    val apiResponse: LiveData<ApiResponse> = _apiResponse
-
-    val books get() = iBookRepository.observe()
+    private val _dataResponse = MutableLiveData<DataResponse<List<Book>>>()
+    val dataResponse: LiveData<DataResponse<List<Book>>> = _dataResponse
 
     init {
         get()
@@ -31,7 +29,7 @@ class BookViewModel @Inject constructor(
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) { iBookRepository.get() }
 
-            _apiResponse.value = result
+            _dataResponse.value = result
         }
     }
 

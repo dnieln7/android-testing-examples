@@ -40,4 +40,5 @@
     <string name="authors">Authors</string>
     <string name="books">Books</string>
     <string name="book_detail">Book information</string>
+    <string name="return_to_collection">Return to my collection</string>
 </resources>

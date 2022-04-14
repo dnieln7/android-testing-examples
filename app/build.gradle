@@ -62,6 +62,7 @@ dependencies {
 
     // Fragment
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    debugImplementation "androidx.fragment:fragment-testing:1.4.1"
 
     // Lifecycles
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
@@ -117,7 +118,11 @@ dependencies {
     androidTestImplementation "androidx.test.ext:truth:1.4.0"
 
     // Coroutines
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines:1.6.1'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
+
+    // Mockito
+    androidTestImplementation 'org.mockito:mockito-android:4.4.0'
 
     // Junit
     testImplementation 'junit:junit:4.13.2'

@@ -40,5 +40,6 @@
     <string name="using_local_data">Usando datos locales</string>
     <string name="authors">Autores</string>
     <string name="books">Libros</string>
-    <string name="book_detail">información del libro</string>
+    <string name="book_detail">Información del libro</string>
+    <string name="return_to_collection">Regresar a mi colección</string>
 </resources>
