@@ -42,4 +42,8 @@
     <string name="books">Libros</string>
     <string name="book_detail">Información del libro</string>
     <string name="return_to_collection">Regresar a mi colección</string>
+    <string name="swipe_to_delete">Deslizar para borrar</string>
+    <string name="hilt_data_source">Hilt Data Source</string>
+    <string name="hilt_repository">Hilt Repository</string>
+    <string name="book_deleted">Libro borrado exitosamente</string>
 </resources>

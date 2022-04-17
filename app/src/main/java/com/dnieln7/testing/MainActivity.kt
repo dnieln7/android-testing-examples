@@ -10,6 +10,7 @@ import com.dnieln7.testing.ui.room.RoomActivity
 import com.dnieln7.testing.ui.login.LoginActivity
 import com.dnieln7.testing.ui.retrofit.RetrofitActivity
 import com.dnieln7.testing.ui.navigation.NavigationActivity
+import com.dnieln7.testing.ui.swipe.SwipeActivity
 import com.dnieln7.testing.ui.work.WorkManagerActivity
 
 class MainActivity : AppCompatActivity() {
@@ -47,6 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.hiltRepository.setOnClickListener {
             startActivity(Intent(this, BooksActivity::class.java))
+        }
+
+        binding.swipeToDelete.setOnClickListener {
+            startActivity(Intent(this, SwipeActivity::class.java))
         }
     }
 }

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestingExamples">
         <activity
+            android:name=".ui.swipe.SwipeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.hilt.books.BooksActivity"
             android:exported="false" />
         <activity

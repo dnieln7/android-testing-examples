@@ -1,10 +1,10 @@
 package com.dnieln7.testing.ui.hilt.books.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -12,7 +12,6 @@ import com.dnieln7.testing.R
 import com.dnieln7.testing.databinding.FragmentBookListBinding
 import com.dnieln7.testing.model.book.Book
 import com.dnieln7.testing.ui.hilt.adapter.BookAdapter
-import com.dnieln7.testing.utils.ApiResponse
 import com.dnieln7.testing.utils.DataSource
 import com.dnieln7.testing.utils.snackShort
 import com.dnieln7.testing.viewmodel.BookViewModel

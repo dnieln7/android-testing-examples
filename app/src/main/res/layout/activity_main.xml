@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:columnCount="2"
-    android:orientation="horizontal"
-    android:paddingHorizontal="5dp"
-    android:useDefaultMargins="true"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/view_model"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/view_model" />
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <Button
-        android:id="@+id/navigation"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/navigation" />
+        <Button
+            android:id="@+id/view_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_model" />
 
-    <Button
-        android:id="@+id/retrofit"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/retrofit" />
+        <Button
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation" />
 
-    <Button
-        android:id="@+id/room"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/room" />
+        <Button
+            android:id="@+id/retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/retrofit" />
 
-    <Button
-        android:id="@+id/work_manager"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/work_manager" />
+        <Button
+            android:id="@+id/room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/room" />
 
-    <Button
-        android:id="@+id/hilt_data_source"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="Hilt Data Source" />
+        <Button
+            android:id="@+id/work_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/work_manager" />
 
-    <Button
-        android:id="@+id/hilt_repository"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="Hilt Repository" />
-</GridLayout>
+        <Button
+            android:id="@+id/hilt_data_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hilt_data_source" />
+
+        <Button
+            android:id="@+id/hilt_repository"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hilt_repository" />
+
+        <Button
+            android:id="@+id/swipe_to_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/swipe_to_delete" />
+    </LinearLayout>
+</ScrollView>

@@ -10,4 +10,6 @@
     <color name="secondary">#FFEB3B</color>
     <color name="secondaryLight">#FFF59D</color>
     <color name="secondaryDark">#FBC02D</color>
+
+    <color name="error">#FF4444</color>
 </resources>

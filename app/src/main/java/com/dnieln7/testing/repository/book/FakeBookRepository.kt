@@ -8,9 +8,13 @@ import com.dnieln7.testing.model.book.BookResponse
 import com.dnieln7.testing.utils.ApiResponse
 import com.dnieln7.testing.utils.DataResponse
 import com.dnieln7.testing.utils.DataSource
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
 
 class FakeBookRepository : IBookRepository {
+
+    private val db = mutableListOf<Book>()
 
     private val _observableBooks = MutableLiveData<List<Book>>()
 
@@ -87,7 +91,10 @@ class FakeBookRepository : IBookRepository {
             )
         )
 
-        _observableBooks.value = response.books
+        db.clear()
+        db.addAll(response.books)
+
+        withContext(Dispatchers.Main) { _observableBooks.value = db }
 
         return DataResponse(data = response.books, source = DataSource.API)
     }
@@ -97,11 +104,9 @@ class FakeBookRepository : IBookRepository {
     }
 
     override suspend fun delete(book: Book) {
-        val old = _observableBooks.value?.toMutableList() ?: mutableListOf()
+        db.remove(book)
 
-        old.remove(book)
-
-        _observableBooks.value = old
+        withContext(Dispatchers.Main) { _observableBooks.value = db }
     }
 
     override fun observe(): LiveData<List<Book>> {

@@ -121,6 +121,9 @@ dependencies {
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines:1.6.1'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
 
+    // Recycler view decorator
+    implementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.4'
+
     // Mockito
     androidTestImplementation 'org.mockito:mockito-android:4.4.0'
 
