@@ -7,7 +7,7 @@ import kotlinx.coroutines.runBlocking
 
 
 class SharedFlows {
-    private val _events = MutableSharedFlow<Int>(1)
+    private val _events = MutableSharedFlow<Int>()
     val events =  _events.asSharedFlow()
 
     suspend fun start() {
@@ -21,11 +21,23 @@ fun main() {
         val shared = SharedFlows()
 
         launch {
-            shared.start()
+            shared.events.collect { println(it) }
+        }
+
+        launch {
+            shared.events.collect { println("-$it") }
         }
 
         delay(1000)
 
-        shared.events.collect { println(it) }
+        launch {
+            shared.start()
+        }
+
+        delay(100)
+
+        launch {
+            shared.events.collect { println("-$it") }
+        }
     }
 }

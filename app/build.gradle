@@ -118,7 +118,6 @@ dependencies {
     androidTestImplementation "androidx.test.ext:truth:1.4.0"
 
     // Coroutines
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines:1.6.1'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
 
     // Recycler view decorator

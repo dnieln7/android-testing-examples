@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.dnieln7.testing.model.book.Book
 import com.dnieln7.testing.repository.book.IBookRepository
 import com.dnieln7.testing.utils.DataResponse
+import com.dnieln7.testing.utils.DataSource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,6 +31,10 @@ class BookViewModel @Inject constructor(
             val result = withContext(Dispatchers.IO) { iBookRepository.get() }
 
             _dataResponse.value = result
+
+            if (result.source == DataSource.API && result.data != null) {
+                withContext(Dispatchers.IO) { iBookRepository.saveAll(result.data) }
+            }
         }
     }
 

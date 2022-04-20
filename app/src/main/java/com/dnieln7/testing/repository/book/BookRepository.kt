@@ -19,7 +19,6 @@ class BookRepository @Inject constructor(
             val response = booksApi.get()
 
             if (response.isSuccessful) {
-                bookDao.saveAll(response.body()?.books ?: emptyList())
                 DataResponse(data = response.body()?.books ?: emptyList(), source = DataSource.API)
             } else {
                 val local = bookDao.get()

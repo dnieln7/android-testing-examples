@@ -23,10 +23,4 @@ object TestModule {
             .allowMainThreadQueries()
             .build()
     }
-
-    @Named("test_book_repository")
-    @Provides
-    fun provideIBookRepository(): IBookRepository {
-        return FakeBookRepository()
-    }
 }
