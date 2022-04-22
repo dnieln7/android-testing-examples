@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/keysFragment"
         android:name="com.dnieln7.testing.ui.navigation.fragment.KeysFragment"
-        android:label="@string/keys"
+        android:label="@string/keyboard"
         tools:layout="@layout/fragment_keys" >
         <argument
             android:name="keySet"
