@@ -1,15 +1,16 @@
 # Testing Examples
 
-Repository for my test examples
+Contents
 
-## Codelabs
-
-| Test                 | Class                 |
-|----------------------|-----------------------|
-| UI                   | LoginActivity         |
-| Unit                 | LoginRemoteDataSource |
-| LiveData             | LoginViewModel        |
-| Navigation Component | NavigationActivity    |
-| Retrofit             | MarsApi               |
-| Room                 | AppDatabase           |
-| Work Manager         | DrinkReminderWorker   |
+| Test                 | Class                                    |
+|----------------------|------------------------------------------|
+| UI                   | LoginActivityTest                        |
+| Unit                 | LoginInMemoryDataSourceTest              |
+| LiveData, Coroutines | LoginViewModelTest, MissionViewModelTest |
+| Navigation Component | NavigationActivityTest                   |
+| Retrofit             | MarsApiTest                              |
+| Room                 | CatDaoTest                               |
+| Work Manager         | DrinkReminderWorkerTest                  |
+| Mockito              | BookDetailFragmentTest                   |
+| Dagger Hilt          | MissionDaoTest                           |
+| Swipe to delte       | SwipeActivityTest                        |
