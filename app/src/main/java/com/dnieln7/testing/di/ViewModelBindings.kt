@@ -16,6 +16,8 @@ import dagger.hilt.android.scopes.ViewModelScoped
 @InstallIn(ViewModelComponent::class)
 abstract class ViewModelBindings {
 
+    // Skip implementation, convenient when I can not provide resources
+
     @Binds
     @ViewModelScoped
     abstract fun provideMissionRemoteDataSource(missionApiDataSource: MissionApiDataSource): MissionRemoteDataSource
