@@ -18,29 +18,33 @@ import kotlinx.coroutines.runBlocking
 fun main() {
     runBlocking {
         val numbers = makeInts()
-        val letters = makeStr()
+        val strings = makeStr()
+
+        numbers.collect { println("first -> $it") }
+
+        delay(5000)
+
+        numbers.collect { println("second -> $it") } // starts from start if it's collected again
 
         coldFlowsOnlyEmitWithObservers(numbers)
         hotFlowEmitsEvenWithoutObservers(numbers)
         convertToHotFlow(numbers)
 
         // zip applies to each pair of values cancels when one of the 2 flows finishes
-        val decimals = numbers.zip(letters) { number, letter ->
-            number * letter.toDouble()
+        numbers.zip(strings) { number, letter ->
+            "$number to $letter"
+        }.collect {
+            println("zip: $it")
         }
-
-        decimals.collect { println("first -> $it") }
-
-        delay(5000)
-
-        decimals.collect { println("second -> $it") } // starts from start if it's collected again
 
         val flow = flowOf(1, 2, 3).onEach { delay(200) }
         val flow2 = flowOf("a", "b", "c", "d").onEach { delay(15) }
 
         // combine applies to the most recently emitted values if d was the most recent, it will combine with 1, 2 and 3
-        flow.combine(flow2) { i, s -> i.toString() + s }.collect {
-            println(it)
+        flow.combine(flow2) { int, string ->
+            "$int to $string"
+        }.collect {
+            println("combine: $it")
         }
     }
 }
@@ -61,7 +65,7 @@ fun coldFlowsOnlyEmitWithObservers(numbers: Flow<Int>) = runBlocking {
     }
 }
 
-fun hotFlowEmitsEvenWithoutObservers(numbers: Flow<Int>)  = runBlocking {
+fun hotFlowEmitsEvenWithoutObservers(numbers: Flow<Int>) = runBlocking {
     val state = numbers.stateIn(this)
 
     val job = launch {
@@ -122,6 +126,7 @@ fun makeInts() = flow {
 fun makeStr() = flow {
     for (i in 10..20) {
         delay(1000)
-        emit(i.toString())
+        println("Emitting string$i ...")
+        emit("string$i")
     }
 }
